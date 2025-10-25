@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <style>
+      body {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        text-align: center;
+      }
+      nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: #f4f4f4;
+        padding: 15px 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+      }
+      nav a {
+        margin: 0 20px;
+        font-size: 18px;
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+      }
+      nav a:hover {
+        color: #0077cc;
+      }
+      .container {
+        max-width: 1000px;
+        margin: auto;
+        padding: 100px 20px 20px; /* top padding matches navbar height */
+      }
+      table {
+        border-collapse: collapse;
+        margin: auto;
+        width: 100%;
+      }
+      td,
+      th {
+        border: 1px solid black;
+        padding: 10px;
+        text-align: center;
+      }
+      .box-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+      }
+      .box {
+        width: 45%;
+        padding: 15px;
+        border: 2px solid black;
+        font-size: 18px;
+      }
+      .language-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin: 10px 0 20px;
+      }
+      .language-container .language {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 18px;
+      }
+      .language-container img {
+        width: 50px;
+        height: 50px;
+      }
+      ul {
+        display: inline-block;
+        text-align: left;
+        font-size: 20px;
+      }
+      .profile-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 20px;
+      }
+      h2,
+      h3 {
+        scroll-margin-top: 80px; /* height of navbar */
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      
+      <a href="#about">About Me</a>
+      <a href="#academics">Academics</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="container">
+      <header>
+        <div class="profile-container">
+          <table>
+            <tr>
+              <td>
+                <img src="images/profile.jpg" alt="My Photo" width="150" />
+              </td>
+              <td>
+                <h2>N. Vijay Krishna</h2>
+                <p style="font-size: 20px">App Developer | Designer | Coder</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <hr />
+      </header>
+      <h2 id="about">About Me</h2>
+      <p style="font-size: 20px">
+        Hi! I'm <strong>Vijay Krishna</strong>, a third-year B.Tech student in
+        Computer Science Engineering (CSE) at
+        <strong>Aditya Institute of Technology and Management</strong>.
+        Currently, I have a CGPA of 8.84, and I am passionate about Technology
+        and App Development.
+      </p>
+      <p style="font-size: 20px">
+        When not coding, you can find me playing <strong>Chess</strong>,
+        listening to <strong>Music</strong>, or diving into
+        <strong>New Project Ideas</strong>.
+      </p>
+      <h2 id="academics">Academics</h2>
+      <table>
+        <tr>
+          <th>Qualifications</th>
+          <th>Marks</th>
+        </tr>
+        <tr>
+          <td>B.Tech</td>
+          <td>8.84 (CGPA)</td>
+        </tr>
+        <tr>
+          <td>Intermediate</td>
+          <td>90.03%</td>
+        </tr>
+        <tr>
+          <td>SSC</td>
+          <td>98.66%</td>
+        </tr>
+      </table>
+      <h3 style="font-size: 24px">Strengths</h3>
+      <p style="font-size: 20px"><strong>Programming Languages</strong></p>
+      <div class="language-container">
+        <div class="language"><img src="images/C.png" alt="C" />C</div>
+        <div class="language"><img src="images/CPP.png" alt="C++" />C++</div>
+        <div class="language">
+          <img src="images/python.jpeg" alt="Python" />Python
+        </div>
+        <div class="language"><img src="images/java.png" alt="Java" />Java</div>
+        <div class="language"><img src="images/dart.png" alt="Dart" />Dart</div>
+      </div>
+      <ul>
+        <li>Good at Communication</li>
+        <li>Good at Leadership and Initiation</li>
+        <li>Always enthusiastic to learn new things</li>
+      </ul>
+      <hr />
+      <h3 style="font-size: 20px">Participations</h3>
+      <div class="box-container">
+        <div class="box">
+          Participated in <strong>Knack With C</strong> in first year
+        </div>
+        <div class="box">
+          Participated in <strong>Compile and Conquer</strong> in second year,
+          won 2nd Prize
+        </div>
+        <div class="box">
+          Participated in <strong>Design Thinking Workshop</strong>, led by
+          <strong>Manoj Kumar Bada Ghar Wala</strong>, organized by AITAM
+        </div>
+        <div class="box">
+          <strong>Techno Vision</strong> by Dept. of CSE, AITAM
+        </div>
+      </div>
+      <hr />
+      <h3 id="projects">Projects</h3>
+      <ul>
+        <li>Weather App</li>
+        <li>
+          EventConnect (Centralized Event Notifier and Tracker for Students)
+        </li>
+      </ul>
+      <hr />
+      <h3 id="contact">Contact Me</h3>
+      <address>
+        <p>Phone / WhatsApp: +91 9550531182</p>
+        <p>
+          Email: <a href="mailto:23a51a05b2@gmail.com">23a51a05b2@gmail.com</a>
+        </p>
+      </address>
+    </div>
+  </body>
+</html>
