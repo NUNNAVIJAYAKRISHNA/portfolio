@@ -1,207 +1,202 @@
 <!DOCTYPE html>
+
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
-    <style>
-      body {
-        scroll-behavior: smooth;
-      }
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        text-align: center;
-      }
-      nav {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        background: #f4f4f4;
-        padding: 15px 0;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        z-index: 1000;
-      }
-      nav a {
-        margin: 0 20px;
-        font-size: 18px;
-        text-decoration: none;
-        color: #333;
-        font-weight: bold;
-      }
-      nav a:hover {
-        color: #0077cc;
-      }
-      .container {
-        max-width: 1000px;
-        margin: auto;
-        padding: 100px 20px 20px; /* top padding matches navbar height */
-      }
-      table {
-        border-collapse: collapse;
-        margin: auto;
-        width: 100%;
-      }
-      td,
-      th {
-        border: 1px solid black;
-        padding: 10px;
-        text-align: center;
-      }
-      .box-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-      }
-      .box {
-        width: 45%;
-        padding: 15px;
-        border: 2px solid black;
-        font-size: 18px;
-      }
-      .language-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-        margin: 10px 0 20px;
-      }
-      .language-container .language {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        font-size: 18px;
-      }
-      .language-container img {
-        width: 50px;
-        height: 50px;
-      }
-      ul {
-        display: inline-block;
-        text-align: left;
-        font-size: 20px;
-      }
-      .profile-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-        margin-bottom: 20px;
-      }
-      h2,
-      h3 {
-        scroll-margin-top: 80px; /* height of navbar */
-      }
-    </style>
-  </head>
-  <body>
-    <nav>
-      
-      <a href="#about">About Me</a>
-      <a href="#academics">Academics</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <div class="container">
-      <header>
-        <div class="profile-container">
-          <table>
-            <tr>
-              <td>
-                <img src="images/profile.jpg" alt="My Photo" width="150" />
-              </td>
-              <td>
-                <h2>N. Vijay Krishna</h2>
-                <p style="font-size: 20px">App Developer | Designer | Coder</p>
-              </td>
-            </tr>
-          </table>
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>NUNNA VIJAYA KRISHNA</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries,line-clamp"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700;900&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#197fe6",
+            "background-light": "#f6f7f8",
+            "background-dark": "#111921",
+            "text-light": "#111418",
+            "text-dark": "#f0f2f4",
+            "subtext-light": "#637588",
+            "subtext-dark": "#a0aec0",
+          },
+          fontFamily: {
+            "display": ["Work Sans", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    }
+  </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+  <div class="relative flex min-h-screen w-full flex-col">
+    <!-- TopNavBar -->
+    <header
+      class="sticky top-0 z-50 w-full border-b border-solid border-text-light/10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+      <div class="mx-auto flex max-w-[960px] items-center justify-between whitespace-nowrap px-4 py-3">
+        <div class="flex items-center gap-4">
+          <div class="size-6 text-primary">
+            <svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor"
+                fill-rule="evenodd"></path>
+            </svg>
+          </div>
+          <h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">NUNNA VIJAYA KRISHNA</h2>
         </div>
-        <hr />
-      </header>
-      <h2 id="about">About Me</h2>
-      <p style="font-size: 20px">
-        Hi! I'm <strong>Vijay Krishna</strong>, a third-year B.Tech student in
-        Computer Science Engineering (CSE) at
-        <strong>Aditya Institute of Technology and Management</strong>.
-        Currently, I have a CGPA of 8.84, and I am passionate about Technology
-        and App Development.
-      </p>
-      <p style="font-size: 20px">
-        When not coding, you can find me playing <strong>Chess</strong>,
-        listening to <strong>Music</strong>, or diving into
-        <strong>New Project Ideas</strong>.
-      </p>
-      <h2 id="academics">Academics</h2>
-      <table>
-        <tr>
-          <th>Qualifications</th>
-          <th>Marks</th>
-        </tr>
-        <tr>
-          <td>B.Tech</td>
-          <td>8.84 (CGPA)</td>
-        </tr>
-        <tr>
-          <td>Intermediate</td>
-          <td>90.03%</td>
-        </tr>
-        <tr>
-          <td>SSC</td>
-          <td>98.66%</td>
-        </tr>
-      </table>
-      <h3 style="font-size: 24px">Strengths</h3>
-      <p style="font-size: 20px"><strong>Programming Languages</strong></p>
-      <div class="language-container">
-        <div class="language"><img src="images/C.png" alt="C" />C</div>
-        <div class="language"><img src="images/CPP.png" alt="C++" />C++</div>
-        <div class="language">
-          <img src="images/python.jpeg" alt="Python" />Python
+        <div class="hidden items-center gap-8 md:flex">
+          <div class="flex items-center gap-9">
+            <a class="text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary"
+              href="#projects">Projects</a>
+            <a class="text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary"
+              href="#about">About</a>
+            <a class="text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary"
+              href="#contact">Contact</a>
+          </div>
+          <button
+            class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] transition-opacity hover:opacity-80">
+            <span class="truncate">Get In Touch</span>
+          </button>
         </div>
-        <div class="language"><img src="images/java.png" alt="Java" />Java</div>
-        <div class="language"><img src="images/dart.png" alt="Dart" />Dart</div>
+        <button class="md:hidden">
+          <span class="material-symbols-outlined text-2xl">menu</span>
+        </button>
       </div>
-      <ul>
-        <li>Good at Communication</li>
-        <li>Good at Leadership and Initiation</li>
-        <li>Always enthusiastic to learn new things</li>
-      </ul>
-      <hr />
-      <h3 style="font-size: 20px">Participations</h3>
-      <div class="box-container">
-        <div class="box">
-          Participated in <strong>Knack With C</strong> in first year
-        </div>
-        <div class="box">
-          Participated in <strong>Compile and Conquer</strong> in second year,
-          won 2nd Prize
-        </div>
-        <div class="box">
-          Participated in <strong>Design Thinking Workshop</strong>, led by
-          <strong>Manoj Kumar Bada Ghar Wala</strong>, organized by AITAM
-        </div>
-        <div class="box">
-          <strong>Techno Vision</strong> by Dept. of CSE, AITAM
-        </div>
+    </header>
+    <main class="flex flex-1 justify-center">
+      <div class="flex max-w-[960px] flex-1 flex-col">
+        <!-- HeroSection -->
+        <section class="w-full @container">
+          <div class="flex flex-col gap-6 px-4 py-16 @[480px]:gap-8 @[864px]:flex-row @[864px]:py-24">
+            <div class="flex flex-1 flex-col gap-6 text-left @[480px]:gap-8 @[864px]:justify-center">
+              <div class="flex flex-col gap-2">
+                <h1 class="text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl">Aspiring computer engineer enthusiastic towards building
+                impactful solutions</h1>
+              <h2 class="text-subtext-light dark:text-subtext-dark text-base font-normal leading-normal">I specialize in
+                creating intuitive and beautiful digital products. Let's build something amazing together.</h2>
+              </div>
+            </div>
+            <div
+              class="w-full aspect-square bg-cover bg-center bg-no-repeat rounded-xl @[480px]:h-auto @[480px]:aspect-video @[864px]:max-w-sm"
+              data-alt="Abstract colorful gradient with flowing shapes"
+              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA8F_sah8g7N8p_pIeWQVF_XnJr33ypugH6B60sRlHQigmjBvvRJnf9mdlsapzO4CKP89MZscldO9-8QqgQ816rqwdoCaTseTglyVBgSWvhPy-fKET5qWV8ZDUJoG0vvTY0nxh5smiUe1MXLoFfju7T3OORsN9fxtR8oz6GoujyUPkbdrJD2w1uRHNU2Vack2DUylvzIFMwobONPWHYKtxOCZ-2PEAMLrowJbMtmeaOeKEmw7XLMA_kt8zlIWvbQAUo7-CaLiSp_9DM");'>
+            </div>
+          </div>
+        </section>
+        <!-- SectionHeader for Projects -->
+        <section class="pt-10" id="projects">
+          <h2 class="text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3">Selected Work</h2>
+        </section>
+        <!-- ImageGrid -->
+        <section>
+          <div class="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-4 p-4">
+            <div
+              class="group flex flex-col gap-3 rounded-lg bg-white/50 dark:bg-white/5 p-3 transition-all hover:bg-white/100 hover:shadow-lg dark:hover:bg-white/10">
+              <div>
+                <p class="text-base font-medium leading-normal">campus connect</p>
+                <p class="text-subtext-light dark:text-subtext-dark text-sm font-normal leading-normal">Colleges often
+                  struggle with effective event management and publicity, as traditional methods like manual
+                  announcements and scattered social media updates lead to poor student awareness and low participation.
+                  To address this issue, we propose CampusConnect—a centralized web platform that streamlines
+                  communication and enhances student engagement within AITAM College. The platform aims to serve as a
+                  one-stop solution for students to stay informed about upcoming events, receive instant updates, and
+                  actively participate. For organizers, it reduces workload by simplifying outreach and improving
+                  overall attendance. By bridging communication gaps, CampusConnect aims to create a more connected and
+                  interactive campus culture.</p>
+              </div>
+            </div>
+            <div
+              class="group flex flex-col gap-3 rounded-lg bg-white/50 dark:bg-white/5 p-3 transition-all hover:bg-white/100 hover:shadow-lg dark:hover:bg-white/10">
+              <div>
+                <p class="text-base font-medium leading-normal">Smart Syllabus Coverage Tracker</p>
+                <p class="text-subtext-light dark:text-subtext-dark text-sm font-normal leading-normal">In many
+                  colleges, monitoring syllabus progress remains inefficient, as faculty and students lack a real-time
+                  platform to track completion. Students often struggle to identify whether they have understood
+                  specific topics, and teachers face difficulty in addressing weak areas effectively. This leads to
+                  gaps in preparation and poor exam performance. To address this, the project proposes a Smart Syllabus
+                  Coverage Tracker, a web-based system where faculty can upload daily topic completion, mark important
+                  areas, and share additional resources. Students can mark their understanding levels, and faculty can
+                  provide helpful links for difficult topics, ensuring personalized support. The tracker also benefits
+                  HODs and administrators, as they can monitor the overall progress of syllabus coverage across
+                  different subjects and ensure timely completion.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- "About Me" Section -->
+        <section class="w-full @container pt-16" id="about">
+          <h2 class="text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-5">About Me</h2>
+          <div class="flex flex-col gap-6 px-4 @[480px]:gap-8 @[864px]:flex-row">
+            <div
+              class="w-full max-w-[200px] mx-auto @[864px]:mx-0 @[864px]:max-w-[250px] aspect-square bg-cover bg-center bg-no-repeat rounded-full"
+              style="background-image: url('images/profile.jpg');" data-alt="Headshot of NUNNA VIJAYA KRISHNA">
+            </div>
+            <div class="flex flex-1 flex-col gap-4 text-left @[864px]:justify-center">
+              <p class="text-subtext-light dark:text-subtext-dark text-base font-normal leading-relaxed">
+                I’m a Computer Science student passionate about machine learning and intelligent automation. My goal is
+                to create systems that think, adapt, and assist — turning complex data into meaningful insights and
+                smarter web-based solutions.
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- Footer -->
+        <footer class="mt-24 border-t border-solid border-text-light/10" id="contact">
+          <div
+            class="mx-auto flex max-w-[960px] flex-col items-center justify-between gap-4 px-4 py-8 text-center sm:flex-row">
+            <p class="text-sm text-subtext-light dark:text-subtext-dark">© 2024 NUNNA VIJAYA KRISHNA. All Rights
+              Reserved.
+            </p>
+            <div class="flex items-center gap-4">
+              <a class="text-subtext-light dark:text-subtext-dark transition-colors hover:text-primary dark:hover:text-primary"
+                data-alt="LinkedIn social media icon" href="#">
+                <svg class="size-6" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z">
+                  </path>
+                </svg>
+              </a>
+              <a class="text-subtext-light dark:text-subtext-dark transition-colors hover:text-primary dark:hover:text-primary"
+                data-alt="Twitter social media icon" href="#">
+                <svg class="size-6" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616v.064c0 2.298 1.634 4.212 3.793 4.649-.562.152-1.158.22-1.758.167.595 1.889 2.323 3.268 4.375 3.305-1.714 1.34-3.854 2.059-6.202 2.059-2.25 0-4.32-.436-6.28-1.288 2.185 1.402 4.735 2.22 7.494 2.22 9.01 0 13.911-7.465 13.911-13.911 0-.213-.005-.426-.015-.637.957-.69 1.785-1.557 2.433-2.526z">
+                  </path>
+                </svg>
+              </a>
+              <a class="text-subtext-light dark:text-subtext-dark transition-colors hover:text-primary dark:hover:text-primary"
+                data-alt="Dribbble social media icon" href="#">
+                <svg class="size-6" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.023 18.237c-3.129-1.272-5.02-4.52-5.111-8.125.132 3.018 1.803 5.955 4.621 7.203-.423.36-.882.68-1.348.887l1.838.035zm1.532-1.182c2.723 0 4.637-2.189 4.944-4.839-2.001.271-4.03.116-5.996-1.077-1.855-1.125-2.885-2.844-3.235-4.821 2.333 3.869 6.273 6.258 10.324 6.784-1.743 2.019-4.22 3.31-7.037 2.953zm8.328-5.344c-.75-3.036-3.232-5.187-6.042-5.692 1.905-.333 3.843-.131 5.423 1.056 1.625 1.22 2.625 3.12 2.619 5.071-.009.684-.083 1.357-.23 2.003-1.63-2.45-3.882-4.142-6.77-4.438zm-1.637-6.95c3.046.504 5.468 2.631 6.202 5.601-2.246-2.021-5.116-3.13-8.042-2.923.385.34.745.711 1.077 1.109 1.171-1.226 2.352-2.31 3.535-3.279l-2.772-.508z">
+                  </path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </footer>
       </div>
-      <hr />
-      <h3 id="projects">Projects</h3>
-      <ul>
-        <li>Weather App</li>
-        <li>
-          EventConnect (Centralized Event Notifier and Tracker for Students)
-        </li>
-      </ul>
-      <hr />
-      <h3 id="contact">Contact Me</h3>
-      <address>
-        <p>Phone / WhatsApp: +91 9550531182</p>
-        <p>
-          Email: <a href="mailto:23a51a05b2@gmail.com">23a51a05b2@gmail.com</a>
-        </p>
-      </address>
-    </div>
-  </body>
+    </main>
+  </div>
+</body>
+
 </html>
