@@ -163,6 +163,7 @@ section {
   border-radius: 12px;
   padding: 32px;
   max-width: 600px;
+  margin-top: 8px;
 }
 
 .job-title {
