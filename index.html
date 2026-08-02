@@ -4,171 +4,345 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Nunna Vijaya Krishna - Portfolio</title>
+	<meta name="description" content="Portfolio of Nunna Vijaya Krishna - Computer Science Student, Software Developer, ML Enthusiast, and Certified ServiceNow Developer.">
+	<title>Nunna Vijaya Krishna | Software Developer & ML Enthusiast</title>
+	
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+	
+	<link rel="stylesheet" href="colors.css">
 	<link rel="stylesheet" href="style.css">
-	<style>
-
-	</style>
 </head>
 
-<body>
-	<!-- HERO -->
-	<section class="hero">
+<body class="bg-obsidian">
+
+	<!-- STICKY NAVBAR -->
+	<header class="navbar">
+		<div class="nav-container">
+			<a href="#" class="nav-logo">
+				<span class="logo-accent bg-arcticwave">NVK</span>
+				<span class="logo-text">Nunna Vijaya Krishna</span>
+			</a>
+			
+			<button class="nav-toggle" id="nav-toggle" onclick="toggleMobileMenu()" aria-label="Toggle Navigation">
+				<span class="hamburger-bar"></span>
+				<span class="hamburger-bar"></span>
+				<span class="hamburger-bar"></span>
+			</button>
+
+			<nav class="nav-menu" id="nav-menu">
+				<a href="#about" class="nav-link" onclick="closeMobileMenu()">About</a>
+				<a href="#experience" class="nav-link" onclick="closeMobileMenu()">Experience</a>
+				<a href="#projects" class="nav-link" onclick="closeMobileMenu()">Projects</a>
+				<a href="#focus" class="nav-link" onclick="closeMobileMenu()">Focus</a>
+				<a href="#skills" class="nav-link" onclick="closeMobileMenu()">Skills</a>
+				<a href="#servicenow" class="nav-link" onclick="closeMobileMenu()">ServiceNow</a>
+				<a href="#achievements" class="nav-link" onclick="closeMobileMenu()">Achievements</a>
+				<a href="#education" class="nav-link" onclick="closeMobileMenu()">Education</a>
+			</nav>
+
+			<a href="mailto:vijayakrishna.n213@gmail.com" class="nav-cta bg-sky" onclick="openContactModal(event)">Get in Touch</a>
+		</div>
+	</header>
+
+	<!-- HERO SECTION -->
+	<section id="about" class="hero">
+		<div class="hero-glow"></div>
 		<div class="hero-content">
+			<div class="profile-wrapper">
+				<div class="profile-ring bg-arcticwave">
+					<img src="images/profile.jpg" alt="Nunna Vijaya Krishna" class="profile-img">
+				</div>
+				<div class="status-badge bg-terminal">
+					<span class="pulse-dot"></span>
+					<span>Open to Opportunities</span>
+				</div>
+			</div>
+
 			<h1 class="name">Nunna Vijaya Krishna</h1>
-			<div class="role">Computer Science Student | Software Developer | ML Enthusiast</div>
-			<p class="tagline">Computer Science student with experience in machine learning, backend systems, and full-stack
-				web applications. Built 5+ projects, trained models on 80,000+ images, and earned industry certifications in
-				ServiceNow, AWS and MongoDB.</p>
+			<div class="role-badge-container">
+				<span class="role-pill bg-circuit">Computer Science Student</span>
+				<span class="role-pill bg-circuit">Software Developer</span>
+				<span class="role-pill bg-circuit">ML Enthusiast</span>
+			</div>
+			
+			<p class="tagline">
+				Computer Science student with hands-on experience in machine learning, backend systems, and full-stack web applications. Built <strong>5+ impactful projects</strong>, trained deep learning models on <strong>80,000+ images</strong>, and earned industry certifications in <strong>ServiceNow (CSA & CAD)</strong>, <strong>AWS</strong>, and <strong>MongoDB</strong>.
+			</p>
 
 			<div class="stats-grid">
-				<div class="stat-card">
+				<div class="stat-card bg-terminal">
+					<div class="stat-icon bg-arcticwave">⚡</div>
 					<div class="stat-number">80K+</div>
 					<div class="stat-label">Images Trained</div>
 				</div>
-				<div class="stat-card">
+				<div class="stat-card bg-terminal">
+					<div class="stat-icon bg-digital">🎯</div>
 					<div class="stat-number">91.2%</div>
 					<div class="stat-label">Best ML Accuracy</div>
 				</div>
-				<div class="stat-card">
+				<div class="stat-card bg-terminal">
+					<div class="stat-icon bg-sunburst">💯</div>
 					<div class="stat-number">100%</div>
 					<div class="stat-label">TCS NQT Coding</div>
 				</div>
-				<div class="stat-card">
+				<div class="stat-card bg-terminal">
+					<div class="stat-icon bg-aurora">🚀</div>
 					<div class="stat-number">5+</div>
 					<div class="stat-label">Projects Built</div>
 				</div>
 			</div>
 
 			<div class="cta-links">
-				<a href="https://github.com/NUNNAVIJAYAKRISHNA" target="_blank" class="cta-btn">GitHub</a>
-				<a href="https://linkedin.com/in/nunnavijayakrishna" target="_blank" class="cta-btn">LinkedIn</a>
-				<a href="mailto:vijayakrishna.n213@gmail.com" class="cta-btn primary">Contact</a>
-				<a href="https://credly.com/users/n-vijay-krishna" target="_blank" class="cta-btn">Credly</a>
+				<a href="https://github.com/NUNNAVIJAYAKRISHNA" target="_blank" class="cta-btn bg-circuit">
+					<svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+					GitHub
+				</a>
+				<a href="https://linkedin.com/in/nunnavijayakrishna" target="_blank" class="cta-btn bg-circuit">
+					<svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+					LinkedIn
+				</a>
+				<a href="mailto:vijayakrishna.n213@gmail.com" class="cta-btn primary bg-sky" onclick="openContactModal(event)">
+					<svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+					Get in Touch
+				</a>
+				<a href="https://credly.com/users/n-vijay-krishna" target="_blank" class="cta-btn bg-circuit">
+					<svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+					Credly Badges
+				</a>
 			</div>
 		</div>
 	</section>
 
-	<!-- EXPERIENCE -->
+	<!-- EXPERIENCE SECTION -->
 	<section id="experience">
-		<h2 class="section-title">Experience</h2>
-		<div class="experience-card">
-			<div class="job-title">Full Stack Developer Intern</div>
-			<div class="job-company">RivoMind Technologies</div>
-			<div class="job-duration">Remote | Jul 2026 – Present</div>
-			<ul class="job-bullets">
-				<li>Worked on understanding the codebase</li>
-				<li>Recommended UI/UX refinements to the project.</li>
-				<li>Actively involving in team discussions and sprint meetings.</li>
-				<li>Delivering the expected results by stipulated time.</li>
-			</ul>
+		<div class="section-header">
+			<span class="section-tag bg-sky">Career Path</span>
+			<h2 class="section-title">Work Experience</h2>
 		</div>
-		<div class="experience-card">
-			<div class="job-title">Web Development Intern</div>
-			<div class="job-company">Cognifyz Technologies</div>
-			<div class="job-duration">Remote | Mar 2026 – Apr 2026</div>
-			<ul class="job-bullets">
-				<li>Debugged and optimized web interfaces using HTML, CSS, JavaScript</li>
-				<li>Implemented frontend features in structured development workflow</li>
-				<li>Applied problem-solving and testing techniques under mentorship</li>
-				<li>Collaborated on assignments requiring core programming concepts</li>
-			</ul>
+
+		<div class="timeline">
+			<div class="timeline-item">
+				<div class="timeline-dot bg-arcticwave"></div>
+				<div class="experience-card bg-terminal">
+					<div class="job-header">
+						<div>
+							<h3 class="job-title">Full Stack Developer Intern</h3>
+							<div class="job-company">RivoMind Technologies</div>
+						</div>
+						<span class="job-badge bg-aurora">Current</span>
+					</div>
+					<div class="job-duration">Remote | Jul 2026 – Present</div>
+					<ul class="job-bullets">
+						<li>Worked on understanding the codebase architecture and system design.</li>
+						<li>Recommended UI/UX refinements to enhance modern web interfaces.</li>
+						<li>Actively involved in cross-functional team discussions and Agile sprint meetings.</li>
+						<li>Delivering expected features and bug fixes within stipulated project deadlines.</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="timeline-item">
+				<div class="timeline-dot bg-sky"></div>
+				<div class="experience-card bg-terminal">
+					<div class="job-header">
+						<div>
+							<h3 class="job-title">Web Development Intern</h3>
+							<div class="job-company">Cognifyz Technologies</div>
+						</div>
+						<span class="job-badge bg-steel">Completed</span>
+					</div>
+					<div class="job-duration">Remote | Mar 2026 – Apr 2026</div>
+					<ul class="job-bullets">
+						<li>Debugged and optimized web interfaces using HTML, CSS, and JavaScript.</li>
+						<li>Implemented responsive frontend features in a structured development workflow.</li>
+						<li>Applied problem-solving and testing techniques under active engineering mentorship.</li>
+						<li>Collaborated on assignments requiring core algorithms and DOM manipulation.</li>
+					</ul>
+				</div>
+			</div>
 		</div>
 	</section>
 
-	<!-- PROJECTS -->
+	<!-- PROJECTS SECTION -->
 	<section id="projects">
-		<h2 class="section-title">Featured Projects</h2>
+		<div class="section-header">
+			<span class="section-tag bg-aurora">Portfolio</span>
+			<h2 class="section-title">Featured Projects</h2>
+		</div>
+
 		<div class="projects-grid">
 
-			<div class="project-card">
-				<div class="project-title">ClassVault - Assignment Submission Platform</div>
-				<div class="project-tech">Next.js 15 • React.js 19 • Node.js • Express • MongoDB</div>
-				<div class="project-section">
-					<div class="project-label">Problem</div>
-					<div class="project-text">Track student submissions at department scale</div>
-				</div>
-				<div class="project-section">
-					<div class="project-label">Solution</div>
-					<div class="project-text">Full-stack platform with role-based auth, RESTful APIs, real-time workflows</div>
-				</div>
-				<div class="project-impact">✨ Live: <a href="https://assignment-submission-gules.vercel.app/" target="_blank">View</a></div>
-			</div>
-			<div class="project-card">
-				<div class="project-title">Plant Disease Classification</div>
-				<div class="project-tech">PyTorch • ConvNeXt • TensorFlow Lite</div>
-				<div class="project-section">
-					<div class="project-label">Problem</div>
-					<div class="project-text">Classify plant diseases from leaf images at scale</div>
-				</div>
-				<div class="project-section">
-					<div class="project-label">Solution</div>
-					<div class="project-text">Custom CNN pipeline with 80K+ images, preprocessing, augmentation, validation</div>
-				</div>
-				<div class="project-impact">📊 91.2% accuracy</div>
-			</div>
-			<div class="project-card">
-				<div class="project-title">Fake News Detection</div>
-				<div class="project-tech">Scikit-Learn • TF-IDF • Python</div>
-				<div class="project-section">
-					<div class="project-label">Problem</div>
-					<div class="project-text">Identify misinformation in text at scale</div>
-				</div>
-				<div class="project-section">
-					<div class="project-label">Solution</div>
-					<div class="project-text">NLP pipeline: TF-IDF vectorization → Logistic Regression classification</div>
-				</div>
-				<div class="project-impact">📈 98.6% accuracy</div>
-			</div>
-			<div class="project-card">
-				<div class="project-title">Student Leave Request Management in ServiceNow</div>
-				<div class="project-tech">Forms UI Policies Business Rules Flow Designer ACL</div>
-				<div class="project-section">
-					<div class="project-label">Problem</div>
-					<div class="project-text">Manual Leave Applications at Educational Institutions, heavy/redundant paperwork and
-						overhead.</div>
-				</div>
-				<div class="project-section">
-					<div class="project-label">Solution</div>
-					<div class="project-text">Role based end-to-end leave request automation with precise flow control and user
-						friendly application reducing human workload in leave management.</div>
+			<!-- ClassVault -->
+			<div class="project-card bg-terminal">
+				<div class="project-banner bg-sky"></div>
+				<div class="project-body">
+					<div class="project-meta">
+						<span class="project-type bg-circuit">Full Stack Platform</span>
+						<a href="https://assignment-submission-gules.vercel.app/" target="_blank" class="live-link bg-sky">Live Demo ↗</a>
+					</div>
+					<h3 class="project-title">ClassVault - Assignment Submission Platform</h3>
+					<div class="project-tech">Next.js 15 • React 19 • Node.js • Express • MongoDB</div>
+					
+					<div class="project-details">
+						<div class="project-section">
+							<div class="project-label">Problem</div>
+							<div class="project-text">Tracking student assignment submissions accurately at department scale without manual paperwork.</div>
+						</div>
+						<div class="project-section">
+							<div class="project-label">Solution</div>
+							<div class="project-text">Full-stack web application featuring role-based authentication, RESTful APIs, file management, and real-time submission workflows.</div>
+						</div>
+					</div>
+					
+					<div class="project-impact bg-circuit">
+						<span class="impact-icon">✨</span>
+						<span>Deploys on Vercel with scalable database design</span>
+					</div>
 				</div>
 			</div>
+
+			<!-- Plant Disease -->
+			<div class="project-card bg-terminal">
+				<div class="project-banner bg-aurora"></div>
+				<div class="project-body">
+					<div class="project-meta">
+						<span class="project-type bg-circuit">Deep Learning</span>
+						<span class="accuracy-badge bg-mint">91.2% Accuracy</span>
+					</div>
+					<h3 class="project-title">Plant Disease Classification Pipeline</h3>
+					<div class="project-tech">PyTorch • ConvNeXt • TensorFlow Lite • OpenCV</div>
+					
+					<div class="project-details">
+						<div class="project-section">
+							<div class="project-label">Problem</div>
+							<div class="project-text">Automated high-accuracy detection of plant diseases from leaf imagery in agricultural environments.</div>
+						</div>
+						<div class="project-section">
+							<div class="project-label">Solution</div>
+							<div class="project-text">Custom deep convolutional neural network (ConvNeXt) trained on an 80,000+ image dataset with advanced augmentation & optimization.</div>
+						</div>
+					</div>
+
+					<div class="project-impact bg-circuit">
+						<span class="impact-icon">📊</span>
+						<span>Achieved 91.2% classification accuracy across complex leaf datasets</span>
+					</div>
+				</div>
+			</div>
+
+			<!-- Fake News -->
+			<div class="project-card bg-terminal">
+				<div class="project-banner bg-digital"></div>
+				<div class="project-body">
+					<div class="project-meta">
+						<span class="project-type bg-circuit">Machine Learning / NLP</span>
+						<span class="accuracy-badge bg-mint">98.6% Accuracy</span>
+					</div>
+					<h3 class="project-title">Fake News Detection Engine</h3>
+					<div class="project-tech">Scikit-Learn • TF-IDF • Python • Pandas</div>
+					
+					<div class="project-details">
+						<div class="project-section">
+							<div class="project-label">Problem</div>
+							<div class="project-text">Identifying textual misinformation and clickbait articles automatically with high speed and reliability.</div>
+						</div>
+						<div class="project-section">
+							<div class="project-label">Solution</div>
+							<div class="project-text">Natural Language Processing pipeline leveraging TF-IDF vectorization and Logistic Regression text classification.</div>
+						</div>
+					</div>
+
+					<div class="project-impact bg-circuit">
+						<span class="impact-icon">📈</span>
+						<span>98.6% classification accuracy on benchmark NLP datasets</span>
+					</div>
+				</div>
+			</div>
+
+			<!-- ServiceNow Leave -->
+			<div class="project-card bg-terminal">
+				<div class="project-banner bg-gold"></div>
+				<div class="project-body">
+					<div class="project-meta">
+						<span class="project-type bg-circuit">ServiceNow Workflow</span>
+						<span class="accuracy-badge bg-amberlight">Enterprise Automation</span>
+					</div>
+					<h3 class="project-title">Student Leave Management System</h3>
+					<div class="project-tech">ServiceNow • Flow Designer • Business Rules • UI Policies • ACL</div>
+					
+					<div class="project-details">
+						<div class="project-section">
+							<div class="project-label">Problem</div>
+							<div class="project-text">Manual student leave applications cause heavy paperwork overhead and delays for academic staff.</div>
+						</div>
+						<div class="project-section">
+							<div class="project-label">Solution</div>
+							<div class="project-text">Automated ServiceNow application with multi-level approval workflows, precise access controls, and custom catalog items.</div>
+						</div>
+					</div>
+
+					<div class="project-impact bg-circuit">
+						<span class="impact-icon">⚙️</span>
+						<span>Streamlined academic approvals and reduced turnaround time significantly</span>
+					</div>
+				</div>
+			</div>
+
 		</div>
 	</section>
 
-	<!-- FOCUS AREAS -->
+	<!-- FOCUS AREAS SECTION -->
 	<section id="focus">
-		<h2 class="section-title">Focus Areas</h2>
+		<div class="section-header">
+			<span class="section-tag bg-lavender">Specializations</span>
+			<h2 class="section-title">Core Focus Areas</h2>
+		</div>
+
 		<div class="focus-grid">
-			<div class="focus-card">
-				<div class="focus-title">Software Engineering</div>
-				<div class="focus-desc">Backend systems, REST APIs, scalable applications, debugging, and problem solving.</div>
+			<div class="focus-card bg-terminal">
+				<div class="focus-icon-box bg-sky">💻</div>
+				<h3 class="focus-title">Software Engineering</h3>
+				<p class="focus-desc">Designing robust backend systems, REST APIs, scalable application architecture, data structures, and efficient algorithms.</p>
 			</div>
-			<div class="focus-card">
-				<div class="focus-title">Machine Learning</div>
-				<div class="focus-desc">Computer Vision, Deep Learning, model training, image classification, and predictive
-					modeling.</div>
+			
+			<div class="focus-card bg-terminal">
+				<div class="focus-icon-box bg-aurora">🧠</div>
+				<h3 class="focus-title">Machine Learning</h3>
+				<p class="focus-desc">Computer Vision, Deep Learning model architectures (CNNs, ConvNeXt), image preprocessing pipelines, and NLP models.</p>
 			</div>
-			<div class="focus-card">
-				<div class="focus-title">Full Stack Development</div>
-				<div class="focus-desc">Modern web applications using React, Node.js, MongoDB, Firebase, and responsive design.
-				</div>
+			
+			<div class="focus-card bg-terminal">
+				<div class="focus-icon-box bg-digital">🌐</div>
+				<h3 class="focus-title">Full Stack Web Dev</h3>
+				<p class="focus-desc">Modern responsive web applications using React.js, Next.js, Node.js, Express, MongoDB, and modern CSS layout engines.</p>
 			</div>
-			<div class="focus-card">
-				<div class="focus-title">Enterprise Platforms</div>
-				<div class="focus-desc">ServiceNow development, automation, workflows, business logic, and custom applications.
-				</div>
+			
+			<div class="focus-card bg-terminal">
+				<div class="focus-icon-box bg-gold">⚙️</div>
+				<h3 class="focus-title">Enterprise ServiceNow</h3>
+				<p class="focus-desc">Custom application development, ServiceNow Flow Designer, Business Rules, Client Scripts, UI Policies, and ACL security configurations.</p>
 			</div>
 		</div>
 	</section>
 
-	<!-- TECH STACK -->
+	<!-- TECH STACK SECTION -->
 	<section id="skills">
-		<h2 class="section-title">Tech Stack</h2>
+		<div class="section-header">
+			<span class="section-tag bg-digital">Toolkit</span>
+			<h2 class="section-title">Technical Expertise</h2>
+		</div>
+
 		<div class="tech-categories">
-			<div class="tech-category">
-				<div class="tech-category-title">Languages</div>
+
+			<!-- Languages -->
+			<div class="tech-category bg-terminal">
+				<div class="tech-category-title">
+					<span class="cat-icon bg-arcticwave"></span>
+					Languages
+				</div>
 				<div class="tech-items">
 					<span class="tech-tag">Python</span>
 					<span class="tech-tag">JavaScript</span>
@@ -178,148 +352,300 @@
 				</div>
 			</div>
 
-			<div class="tech-category">
-				<div class="tech-category-title">Backend & Systems</div>
+			<!-- Backend -->
+			<div class="tech-category bg-terminal">
+				<div class="tech-category-title">
+					<span class="cat-icon bg-sky"></span>
+					Backend & Databases
+				</div>
 				<div class="tech-items">
 					<span class="tech-tag">Node.js</span>
 					<span class="tech-tag">Express.js</span>
 					<span class="tech-tag">MongoDB</span>
 					<span class="tech-tag">Firebase</span>
-					<span class="tech-tag">REST APIs</span>
+					<span class="tech-tag">RESTful APIs</span>
+					<span class="tech-tag">SQL</span>
 				</div>
 			</div>
 
-			<div class="tech-category">
-				<div class="tech-category-title">Frontend</div>
+			<!-- Frontend -->
+			<div class="tech-category bg-terminal">
+				<div class="tech-category-title">
+					<span class="cat-icon bg-aurora"></span>
+					Frontend Development
+				</div>
 				<div class="tech-items">
 					<span class="tech-tag">React.js</span>
-					<span class="tech-tag">HTML/CSS</span>
-					<span class="tech-tag">Tailwind</span>
-					<span class="tech-tag">JavaScript</span>
+					<span class="tech-tag">Next.js 15</span>
+					<span class="tech-tag">HTML5 / CSS3</span>
+					<span class="tech-tag">Tailwind CSS</span>
+					<span class="tech-tag">JavaScript (ES6+)</span>
 				</div>
 			</div>
 
-			<div class="tech-category">
-				<div class="tech-category-title">Machine Learning</div>
+			<!-- ML & Data Science -->
+			<div class="tech-category bg-terminal">
+				<div class="tech-category-title">
+					<span class="cat-icon bg-lavender"></span>
+					Machine Learning & AI
+				</div>
 				<div class="tech-items">
 					<span class="tech-tag">PyTorch</span>
 					<span class="tech-tag">TensorFlow</span>
 					<span class="tech-tag">Scikit-Learn</span>
+					<span class="tech-tag">OpenCV</span>
 					<span class="tech-tag">Pandas</span>
 					<span class="tech-tag">NumPy</span>
 				</div>
 			</div>
 
-			<div class="tech-category">
-				<div class="tech-category-title">Tools & Infrastructure</div>
+			<!-- ServiceNow -->
+			<div class="tech-category bg-terminal">
+				<div class="tech-category-title">
+					<span class="cat-icon bg-gold"></span>
+					ServiceNow Platform
+				</div>
 				<div class="tech-items">
-					<span class="tech-tag">Git</span>
+					<span class="tech-tag">Business Rules</span>
+					<span class="tech-tag">Client Scripts</span>
+					<span class="tech-tag">Flow Designer</span>
+					<span class="tech-tag">UI Policies</span>
+					<span class="tech-tag">ACL Security</span>
+					<span class="tech-tag">Scoped Apps</span>
+				</div>
+			</div>
+
+			<!-- Tools -->
+			<div class="tech-category bg-terminal">
+				<div class="tech-category-title">
+					<span class="cat-icon bg-digital"></span>
+					Developer Tools
+				</div>
+				<div class="tech-items">
+					<span class="tech-tag">Git & GitHub</span>
 					<span class="tech-tag">VS Code</span>
-					<span class="tech-tag">Antigravity</span>
-					<span class="tech-tag">Claude</span>
-					<span class="tech-tag">Jupyter</span>
-					<span class="tech-tag">OpenCV</span>
+					<span class="tech-tag">Jupyter Notebooks</span>
+					<span class="tech-tag">Postman</span>
+					<span class="tech-tag">Vercel</span>
 				</div>
 			</div>
 
-			<div class="tech-category">
-				<div class="tech-category-title">Core CS</div>
-				<div class="tech-items">
-					<span class="tech-tag">DSA</span>
-					<span class="tech-tag">OOP</span>
-					<span class="tech-tag">REST</span>
-					<span class="tech-tag">Databases</span>
-				</div>
-			</div>
 		</div>
 	</section>
 
-	<!-- SERVICENOW -->
+	<!-- SERVICENOW SECTION -->
 	<section id="servicenow">
-		<h2 class="section-title">ServiceNow Development</h2>
+		<div class="section-header">
+			<span class="section-tag bg-gold">Specialized Platform</span>
+			<h2 class="section-title">ServiceNow Development</h2>
+		</div>
+
 		<div class="servicenow-grid">
-			<div class="servicenow-card">
-				<div class="servicenow-card-title">Certifications</div>
+			<div class="servicenow-card bg-terminal">
+				<div class="sn-card-header bg-gold"></div>
+				<div class="servicenow-card-title">
+					<span class="sn-icon">📜</span>
+					Certifications
+				</div>
 				<div class="servicenow-items">
-					<div class="servicenow-item">ServiceNow CSA</div>
-					<div class="servicenow-item">ServiceNow CAD</div>
+					<div class="servicenow-item">
+						<span class="sn-cert-title">ServiceNow Certified System Administrator (CSA)</span>
+						<span class="sn-cert-badge bg-mint">Verified</span>
+					</div>
+					<div class="servicenow-item">
+						<span class="sn-cert-title">ServiceNow Certified Application Developer (CAD)</span>
+						<span class="sn-cert-badge bg-mint">Verified</span>
+					</div>
 				</div>
 			</div>
-			<div class="servicenow-card">
-				<div class="servicenow-card-title">Development Experience</div>
+
+			<div class="servicenow-card bg-terminal">
+				<div class="sn-card-header bg-sky"></div>
+				<div class="servicenow-card-title">
+					<span class="sn-icon">🛠️</span>
+					Platform Capabilities
+				</div>
 				<div class="servicenow-items">
-					<div class="servicenow-item">Business Rules</div>
-					<div class="servicenow-item">Client Scripts</div>
-					<div class="servicenow-item">UI Policies</div>
-					<div class="servicenow-item">UI Actions</div>
-					<div class="servicenow-item">ACLs</div>
-					<div class="servicenow-item">Scoped Applications</div>
+					<div class="servicenow-item">Business Rules & Server-Side Scripting</div>
+					<div class="servicenow-item">Client Scripts & UI Policies</div>
+					<div class="servicenow-item">UI Actions & Form Customizations</div>
+					<div class="servicenow-item">Access Control Lists (ACLs) Security</div>
+					<div class="servicenow-item">Flow Designer Workflow Automation</div>
+					<div class="servicenow-item">Scoped Applications & Catalog Items</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<!-- ACHIEVEMENTS -->
+	<!-- ACHIEVEMENTS SECTION -->
 	<section id="achievements">
-		<h2 class="section-title">Achievements</h2>
+		<div class="section-header">
+			<span class="section-tag bg-sunburst">Milestones</span>
+			<h2 class="section-title">Key Achievements</h2>
+		</div>
+
 		<div class="achievements-grid">
-			<div class="achievement-card">
-				<div class="achievement-icon">🏆</div>
-				<div class="achievement-title">TCS NQT 2026 - March 20</div>
-				<div class="achievement-desc">79th percentile | Coding: 100% | Advanced: 83%</div>
+			<div class="achievement-card bg-terminal">
+				<div class="achievement-header bg-sunburst"></div>
+				<div class="achievement-body">
+					<div class="achievement-icon">🏆</div>
+					<h3 class="achievement-title">TCS NQT 2026</h3>
+					<div class="achievement-sub">March 20, 2026</div>
+					<div class="achievement-desc">
+						Achieved <strong>79th Percentile Overall</strong><br>
+						<span class="highlight-score bg-circuit">Coding: 100%</span>
+						<span class="highlight-score bg-circuit">Advanced: 83%</span>
+					</div>
+				</div>
 			</div>
-			<div class="achievement-card">
-				<div class="achievement-icon">🥈</div>
-				<div class="achievement-title">Compile & Conquer</div>
-				<div class="achievement-desc">2nd Prize – C Programming competition</div>
+
+			<div class="achievement-card bg-terminal">
+				<div class="achievement-header bg-flare"></div>
+				<div class="achievement-body">
+					<div class="achievement-icon">🥈</div>
+					<h3 class="achievement-title">Compile & Conquer</h3>
+					<div class="achievement-sub">Coding Competition</div>
+					<div class="achievement-desc">
+						Awarded <strong>2nd Prize</strong> in the inter-college C Programming Competitive Coding Contest.
+					</div>
+				</div>
 			</div>
-			<div class="achievement-card">
-				<div class="achievement-icon">🥈</div>
-				<div class="achievement-title">Pythonista</div>
-				<div class="achievement-desc">2nd Prize – Python Programming competition</div>
+
+			<div class="achievement-card bg-terminal">
+				<div class="achievement-header bg-aurora"></div>
+				<div class="achievement-body">
+					<div class="achievement-icon">🥈</div>
+					<h3 class="achievement-title">Pythonista</h3>
+					<div class="achievement-sub">Development Hackathon</div>
+					<div class="achievement-desc">
+						Secured <strong>2nd Prize</strong> in Python Programming & Problem Solving Challenge.
+					</div>
+				</div>
 			</div>
-			
 		</div>
 	</section>
 
-	<!-- CERTIFICATIONS -->
+	<!-- CERTIFICATIONS SECTION -->
 	<section id="certifications">
-		<h2 class="section-title">Certifications</h2>
-		<div class="certs-grid">
-			<div class="cert-item">ServiceNow CSA</div>
-			<div class="cert-item">ServiceNow CAD</div>
-			<div class="cert-item">MongoDB Associate Developer</div>
-			<div class="cert-item">AWS AI Practitioner</div>
-			<div class="cert-item">NPTEL Python for Data Science</div>
-			<div class="cert-item">NPTEL Fundamentals of AI</div>
+		<div class="section-header">
+			<span class="section-tag bg-ethereal">Credentials</span>
+			<h2 class="section-title">Certifications</h2>
+		</div>
 
+		<div class="certs-grid">
+			<div class="cert-item bg-terminal">
+				<div class="cert-icon bg-gold">🛡️</div>
+				<div class="cert-name">ServiceNow CSA</div>
+				<div class="cert-issuer">Certified System Administrator</div>
+			</div>
+			<div class="cert-item bg-terminal">
+				<div class="cert-icon bg-gold">⚡</div>
+				<div class="cert-name">ServiceNow CAD</div>
+				<div class="cert-issuer">Certified Application Developer</div>
+			</div>
+			<div class="cert-item bg-terminal">
+				<div class="cert-icon bg-aurora">🍃</div>
+				<div class="cert-name">MongoDB Associate</div>
+				<div class="cert-issuer">Developer Certification</div>
+			</div>
+			<div class="cert-item bg-terminal">
+				<div class="cert-icon bg-sky">☁️</div>
+				<div class="cert-name">AWS AI Practitioner</div>
+				<div class="cert-issuer">Amazon Web Services</div>
+			</div>
+			<div class="cert-item bg-terminal">
+				<div class="cert-icon bg-lavender">📜</div>
+				<div class="cert-name">NPTEL Python</div>
+				<div class="cert-issuer">Python for Data Science</div>
+			</div>
+			<div class="cert-item bg-terminal">
+				<div class="cert-icon bg-digital">🤖</div>
+				<div class="cert-name">NPTEL AI Fundamentals</div>
+				<div class="cert-issuer">Fundamentals of AI</div>
+			</div>
 		</div>
 	</section>
 
-	<!-- EDUCATION -->
+	<!-- EDUCATION SECTION -->
 	<section id="education">
-		<h2 class="section-title">Education</h2>
-		<div class="education-card">
-			<div class="ed-degree">B.Tech in Computer Science & Engineering</div>
-			<div class="ed-school">Aditya Institute of Technology and Management</div>
-			<div class="ed-meta">
-				<span>CGPA: 8.63</span>
-				<span>Expected Graduation: 2027</span>
+		<div class="section-header">
+			<span class="section-tag bg-sky">Academic Background</span>
+			<h2 class="section-title">Education</h2>
+		</div>
+
+		<div class="education-card bg-terminal">
+			<div class="ed-accent bg-arcticwave"></div>
+			<div class="ed-body">
+				<div class="ed-icon">🎓</div>
+				<h3 class="ed-degree">B.Tech in Computer Science & Engineering</h3>
+				<div class="ed-school">Aditya Institute of Technology and Management</div>
+				<div class="ed-meta">
+					<span class="ed-cgpa bg-circuit">CGPA: <strong>8.63</strong></span>
+					<span class="ed-year bg-circuit">Expected Graduation: <strong>2027</strong></span>
+				</div>
 			</div>
 		</div>
 	</section>
 
 	<!-- CTA FOOTER -->
-	<section class="cta-footer">
-		<div class="cta-text">Open to Software Engineering, Machine Learning, ServiceNow, and Full Stack Development
-			opportunities.</div>
-		<div class="cta-links">
-			<a href="https://github.com/NUNNAVIJAYAKRISHNA" target="_blank" class="cta-btn">GitHub</a>
-			<a href="https://linkedin.com/in/nunnavijayakrishna" target="_blank" class="cta-btn">LinkedIn</a>
-			<a href="mailto:vijayakrishna.n213@gmail.com" class="cta-btn primary">Get in Touch</a>
+	<footer class="cta-footer bg-terminal">
+		<div class="footer-container">
+			<h2 class="footer-title">Let's Build Something Great Together</h2>
+			<p class="cta-text">Open to Software Engineering, Machine Learning, ServiceNow, and Full Stack Development opportunities.</p>
+			
+			<div class="cta-links">
+				<a href="https://github.com/NUNNAVIJAYAKRISHNA" target="_blank" class="cta-btn bg-circuit">GitHub</a>
+				<a href="https://linkedin.com/in/nunnavijayakrishna" target="_blank" class="cta-btn bg-circuit">LinkedIn</a>
+				<a href="mailto:vijayakrishna.n213@gmail.com" class="cta-btn primary bg-sky" onclick="openContactModal(event)">Get in Touch</a>
+			</div>
+			
+			<div class="contact-line">
+				<span>📍 India</span> • 
+				<span>📞 +91 9550531182</span> • 
+				<span>✉️ vijayakrishna.n213@gmail.com</span>
+			</div>
+			
+			<div class="copyright">
+				© 2026 Nunna Vijaya Krishna. All rights reserved.
+			</div>
 		</div>
-		<div class="contact-line">+91 9550531182 | vijayakrishna.n213@gmail.com</div>
-	</section>
+	</footer>
+
+	<!-- CONTACT MODAL -->
+	<div id="contact-modal" class="modal-overlay">
+		<div class="modal-card bg-terminal">
+			<button class="modal-close" onclick="closeContactModal()" aria-label="Close">&times;</button>
+			<div class="modal-header">
+				<h3 class="modal-title">Get in Touch</h3>
+				<p class="modal-sub">Send a message directly to <strong>vijayakrishna.n213@gmail.com</strong></p>
+			</div>
+			<form onsubmit="sendMail(event)" class="modal-form">
+				<div class="form-group">
+					<label for="sender-name">Your Name *</label>
+					<input type="text" id="sender-name" placeholder="John Doe" required class="form-input">
+				</div>
+				<div class="form-group">
+					<label for="sender-email">Your Email *</label>
+					<input type="email" id="sender-email" placeholder="john@example.com" required class="form-input">
+				</div>
+				<div class="form-group">
+					<label for="sender-subject">Subject</label>
+					<input type="text" id="sender-subject" placeholder="Project Opportunity / Inquiry" class="form-input">
+				</div>
+				<div class="form-group">
+					<label for="sender-message">Message *</label>
+					<textarea id="sender-message" rows="4" placeholder="Hello Vijay, I would like to discuss..." required class="form-input"></textarea>
+				</div>
+				<div id="form-status" class="form-status"></div>
+				<div class="modal-actions">
+					<button type="submit" class="submit-btn bg-sky">Send Message 🚀</button>
+					<a href="mailto:vijayakrishna.n213@gmail.com" class="direct-mail-btn">Direct Email</a>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<script src="script.js"></script>
 </body>
 
 </html>
