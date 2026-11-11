@@ -147,25 +147,25 @@ export default function Home() {
 			<article className="project-card" data-category="servicenow">
 				<div className="project-body">
 					<div className="project-meta">
-						<span className="project-type">ServiceNow Automation</span>
-						<span className="accuracy-badge">Enterprise Flow</span>
+						<span className="project-type">ServiceNow Scoped App</span>
+						<span className="accuracy-badge">35/35 UAT &#8226; 10/10 Security PoC</span>
 					</div>
-					<h3 className="project-title">Student Leave Management System</h3>
-					<div className="project-tech">ServiceNow &#8226; Flow Designer &#8226; Business Rules &#8226; ACL</div>
+					<h3 className="project-title">Patient Discharge Readiness Command Center</h3>
+					<div className="project-tech">ServiceNow &#8226; Flow Designer &#8226; Script Includes &#8226; Business Rules &#8226; ACLs &#8226; Service Portal</div>
 					
 					<div className="project-details">
 						<div className="project-section">
 							<div className="project-label">Problem</div>
-							<div className="project-text">Manual student leave applications cause heavy paperwork overhead and delays for academic staff.</div>
+							<div className="project-text">Medically cleared hospital discharges stall across uncoordinated Pharmacy, Billing/TPA, Transport, and Nursing handoffs, delaying bed turnover and caregiver visibility.</div>
 						</div>
 						<div className="project-section">
 							<div className="project-label">Solution</div>
-							<div className="project-text">Automated ServiceNow application with multi-level approval workflows, precise access controls, and custom catalog items.</div>
+							<div className="project-text">Scoped ServiceNow application across 5 custom tables with Flow Designer checklists &#38; SLAs, server-side blocker rollup, gatekeeper Business Rules, RBAC/ACLs, and a tokenized zero-PHI Caregiver Portal.</div>
 						</div>
 					</div>
 
 					<div className="project-impact">
-						<span>Streamlined academic approvals and reduced turnaround time significantly</span>
+						<span>Passed 35/35 UAT scenarios and 10/10 Gate 3.5 security tests with zero PHI leakage</span>
 					</div>
 				</div>
 			</article>
