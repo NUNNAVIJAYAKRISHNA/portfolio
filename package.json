@@ -1,0 +1,33 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Light editorial portfolio built with Next.js and Nodemailer",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NUNNAVIJAYAKRISHNA/portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/NUNNAVIJAYAKRISHNA/portfolio/issues"
+  },
+  "homepage": "https://github.com/NUNNAVIJAYAKRISHNA/portfolio#readme",
+  "dependencies": {
+    "next": "^16.4.2",
+    "nodemailer": "^10.1.7",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=20.9.0"
+  }
+}
