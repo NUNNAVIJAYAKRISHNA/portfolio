@@ -17,7 +17,7 @@ Open http://localhost:3000. For production: `npm run build`, then `npm start`. D
 
 Copy `.env.example` to `.env.local`, fill in your SMTP provider credentials and verified sender, and restart the server. Set `SITE_URL` to the exact public origin in production. Use port 465 for implicit TLS or 587 for STARTTLS. SMTP credentials must never use a `NEXT_PUBLIC_` prefix. Configure the same environment variables in your hosting provider.
 
-The server uses a fixed `CONTACT_TO` recipient and verified `SMTP_FROM`; visitors only supply Reply-To. It sends plain text, validates/limits input, rejects foreign origins, enforces TLS, disables file/URL attachment access, and returns no provider secrets. The form preserves input and offers Direct Mail on failure. Success means the SMTP server accepted the recipient, not a guarantee of inbox delivery.
+The server uses a fixed `CONTACT_TO` recipient and verified `SMTP_FROM` (falling back to `SMTP_USER` when `SMTP_FROM` is omitted and `SMTP_USER` is an email address); visitors only supply Reply-To. It sends plain text, validates/limits input, rejects foreign origins, enforces TLS, disables file/URL attachment access, and returns no provider secrets. The form preserves input and offers Direct Mail on failure. Success means the SMTP server accepted the recipient, not a guarantee of inbox delivery.
 
 The rate limit is process-local (three attempts per sender and twenty total per ten minutes). Add host/edge rate limiting for a public multi-instance deployment; the in-memory limiter does not coordinate across servers or survive restarts. No external delivery was attempted during migration. Real delivery requires your SMTP configuration.
 
